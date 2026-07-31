@@ -1,4 +1,4 @@
-name: Multiple jobs workflow
+name: Sequential executing of multiple jobs workflow
 on: workflow_dispatch
 jobs:
   job-1:
