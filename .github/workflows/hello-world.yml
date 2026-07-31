@@ -5,4 +5,6 @@ jobs:
     runs-on: ubuntu-slim
     steps:
       - name: Hellp World Step
-        run: echo "Welcome to my first Hello World GitHub action workflow"
+        run: | 
+         echo "Welcome to my first Hello World GitHub action workflow"
+         echo "This is line two"
