@@ -1,0 +1,10 @@
+name: Push Workflow
+on: push
+jobs:
+  push-workflow:
+    runs-on: ubuntu-slim
+    steps:
+      - name: Push Workflow Step
+        run: | 
+         echo "Welcome to my first Push Workflow GitHub action workflow"
+         echo "This is line two"
