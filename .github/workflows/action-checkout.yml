@@ -4,7 +4,7 @@ jobs:
   action-demo:
     runs-on: ubuntu-slim
     steps:
-      -name: Checkout the code
+      - name: Checkout the code
        uses: actions/checkout@v4
-      -name: Print index.html file content
+      - name: Print index.html file content
        run: cat index.html
