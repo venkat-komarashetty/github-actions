@@ -7,4 +7,5 @@ jobs:
       - name: Hellp World Step
         run: | 
          echo "Welcome to my first Hello World GitHub action workflow..."
+         echo "I am ${{vars.MY_NAME}}"
          echo "This is line two..."
