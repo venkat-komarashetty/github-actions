@@ -1,0 +1,14 @@
+name: ENV demo
+on: workflow_dispatch
+env:
+  APP_ENV: "dev"
+jobs:
+  env-demo:
+    runs-on: ubuntu-slim
+    env:
+      APP_ENV: "test"
+    steps:
+      - name: Print env variable
+        env:
+          APP_ENV: "prod"
+        run: echo "The env variable is $APP_ENV"
