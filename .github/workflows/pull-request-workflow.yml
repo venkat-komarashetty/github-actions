@@ -1,7 +1,5 @@
 name: Pull Request Workflow
 on: pull_request
-branches:
-  - main
 jobs:
   pull-request-workflow:
     runs-on: ubuntu-slim
