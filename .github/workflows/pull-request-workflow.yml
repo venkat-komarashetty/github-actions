@@ -3,8 +3,6 @@ on: pull_request
 jobs:
   pull-request-workflow:
     runs-on: ubuntu-slim
-    branches:
-      - main
     steps:
       - name: Pull Request Workflow Step
         run: echo "Pull Request Workflow Step"
