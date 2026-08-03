@@ -1,9 +1,14 @@
 name: Reusable Workflow
 on:
   workflow_call:
+    inputs:
+      fname:
+        description: 'Enter First name'
+        required: true
+        type: string
 jobs:
   greetings:
     runs-on: ubuntu-slim
     steps:
       - name: Print greeting
-        run: echo "Welcome to the reusable workflow"
+        run: echo "Welcome ${{ inputs.fname }} to the reusable workflow"
