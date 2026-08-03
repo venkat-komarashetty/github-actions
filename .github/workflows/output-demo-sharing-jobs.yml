@@ -1,0 +1,17 @@
+name: Output demo - sharing data between jobs
+on: push
+jobs:
+  build:
+    outputs:
+      version: ${{ steps.step1.outputs.version }}
+    runs-on: ubuntu-slim
+    steps:
+      - name: Build step
+        id: step1
+        run: echo "version=0.0.1" >> $GITHUB_OUTPUT
+  deploy:
+    needs: build
+    runs-on: ubuntu-slim
+    steps:
+      - name: Deploy step
+        run: echo "The version is ${{ needs.build.outputs.version }}"
