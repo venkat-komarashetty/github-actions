@@ -1,0 +1,19 @@
+name: Inputs Demo
+on:
+  workflow_dispatch:
+    inputs:
+      env:
+        description: 'The environment to use'
+        required: true
+        default: 'dev'
+        type: choice
+        options:
+          - dev
+          - test
+          - prod
+jobs:
+  inputs-demo:
+    runs-on: ubuntu-slim
+    steps:
+      - name: Deploy the application
+        run: echo "The input variable is ${{ inputs.env }}"
