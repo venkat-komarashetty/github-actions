@@ -1,0 +1,16 @@
+name: If condition demo in steps
+on: 
+  push:
+    branches:
+      - main
+      - develop
+jobs:
+  if-demo:
+    runs-on: ubuntu-slim
+    steps:
+      - name: Run if branch is main
+        if: github.ref == 'refs/heads/main'
+        run: echo "This step runs only on the main branch"
+      - name: Run this step
+        run: echo "This step always runs"
+        
