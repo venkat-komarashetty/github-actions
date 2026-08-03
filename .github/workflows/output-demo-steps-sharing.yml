@@ -6,6 +6,6 @@ jobs:
     steps:
       - name: Storing outout in a file
         id: step1
-        run: echo "version=0.0.1" >> $GITHUB_OUTPUTS
+        run: echo "version=0.0.1" >> $GITHUB_OUTPUT
       - name: Printing the output
         run: echo "The version is ${{steps.step1.outputs.version}}"
