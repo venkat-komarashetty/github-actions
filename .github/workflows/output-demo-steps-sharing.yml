@@ -1,0 +1,11 @@
+name: Output demo - sharing data between steps
+on: push
+jobs:
+  job1:
+    runs-on: ubuntu-slim
+    steps:
+      - name: Storing outout in a file
+        id: step1
+        run: echo "version=0.0.1" >> $GITHUB_OUTPUTS
+      - name: Printing the output
+        run: echo "The version is ${{steps.step1.outputs.version}}"
