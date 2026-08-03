@@ -1,0 +1,9 @@
+name: Reusable Workflow
+on:
+  workflow_call:
+jobs:
+  greetings:
+    runs-on: ubuntu-slim
+    steps:
+      - name: Print greeting
+        run: echo "Welcome to the reusable workflow"
