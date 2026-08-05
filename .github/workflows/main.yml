@@ -1,0 +1,12 @@
+name: Upload artifact
+on: workflow_dispatch
+jobs:
+  upload_artifact:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Uploading artitfact
+        uses: actions/upload-artifact@v2
+        with:
+          name: my-first-artifact
+          path: my_file.txt
+          retention-days: 10
