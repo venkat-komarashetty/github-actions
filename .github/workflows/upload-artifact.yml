@@ -1,3 +1,4 @@
+[![Upload artifact](https://github.com/venkat-komarashetty/github-actions/actions/workflows/upload-artifact.yml/badge.svg?event=workflow_dispatch)](https://github.com/venkat-komarashetty/github-actions/actions/workflows/upload-artifact.yml)
 name: Upload artifact
 on: workflow_dispatch
 jobs:
