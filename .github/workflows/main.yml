@@ -8,5 +8,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: my-first-artifact
-          path: my_file.txt
+          path: ./index.html
           retention-days: 10
